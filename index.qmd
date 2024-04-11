@@ -1,0 +1,34 @@
+---
+title-block-banner: fiveoone_banner.png
+title-block-banner-color: light
+titlegraphic: fiveoone_banner.png
+---
+
+## About this course {.unnumbered}
+
+Welcome to the course notes for STAT 501: Regression Methods. These notes are designed and developed by [Penn State's Department of Statistics](https://science.psu.edu/stat) and offered as open educational resources. These notes are free to use under Creative Commons license [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/).
+
+This course is part of the Online Master of Applied Statistics program offered by Penn State's World Campus.
+
+<center>
+<a href="https://www.worldcampus.psu.edu/register-or-schedule-courses" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ready to enroll?</a>
+</center>
+
+> ### Currently enrolled?
+>
+> If you are a current student in this course, please see [Canvas](https://psu.instructure.com/) for your syllabus, assignments, lesson videos, and communication from your instructor.
+
+
+::: content-hidden
+> ### How to enroll?
+>
+> If you would like to enroll and experience the entire course for credit please see ['How to enroll in a course'](https://www.worldcampus.psu.edu/register-or-schedule-courses) on the World Campus website.
+:::
+
+### Contributors
+
+This is the STAT 501 online course materials website. There are lots of examples, notes, and lecture materials on this website. You may want to make a bookmark for this site in your browser.
+
+Featured on this site are the online notes on Regression Methods reorganized and supplemented by Dr. Iain Pardoe, based on original notes by Dr. Laura Simon and Dr. Derek Young.
+
+In addition, in the resources section, there are worked examples using Minitab that demonstrate how to perform many of the methods used in regression and video resources containing instructive examples.

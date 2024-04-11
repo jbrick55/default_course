@@ -1,0 +1,129 @@
+project:
+  type: book
+  output-dir: _book
+  resources: .htaccess
+
+#title-block-banner: banner_stat.png
+#title-block-banner-color: "#093162"
+book:
+  title: "STAT 501 | Regression Methods"
+  favicon: assets/favicon.ico
+  page-navigation: true
+  sidebar:
+    style: "docked"
+    logo: PSU_Ecosshield.png
+    search: true #search window on the left nav
+    contents: auto #this is to create the nav from the files automatically, but it doesn't appear to be working
+  navbar:
+    background: "#001E44" # this is 'nittany navy'
+    foreground: "light"
+    right:
+      - text: "Department of Statistics"
+        url: https://science.psu.edu/stat
+
+
+  search:
+    location: sidebar
+  reader-mode: true
+  site-url: https://dev.stat.psu.edu/quarto501. #I don't know if this works
+
+
+  back-to-top-navigation: true
+  chapters:
+    - index.qmd
+    - part: "Lessons"
+      chapters:
+        - 501Lesson1.qmd
+        - 501Lesson2.qmd
+        - 501Lesson3.qmd
+        - 501Lesson4.qmd
+        - 501Lesson5.qmd
+        - 501Lesson6.qmd
+        - 501Lesson7.qmd
+        - 501Lesson8.qmd
+        - 501Lesson9.qmd
+        - 501Lesson10.qmd
+        - 501Lesson11.qmd
+        - 501Lesson12.qmd
+        - 501Lesson13.qmd
+    - part: "Optional Content"
+      chapters:
+        - Topic1Robustregression.qmd
+        - Topic2TSandAutocorr.qmd
+        - Topic3Poissonnonlinear.qmd
+    - part: "Resources"
+      chapters:
+        - Minitab_procedures.qmd
+        - notationused.qmd
+
+  ## Use <br> to make a new line in the footer
+  page-footer:
+    background: light
+    left: |
+      Except where otherwise noted, content on this site is licensed under a [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) license.<br><br>
+      ![BYNC](assets/SVG/by-nc.svg)
+    center: "[OPEN.ED@PSU](https://oer.psu.edu/)"
+    right: "[Privacy](https://www.psu.edu/web-privacy-statement/) | [Accessiblity](https://www.psu.edu/accessibilitystatement/) | [Copyright](https://www.psu.edu/copyright-information/) <br>
+      [The Pennsylvania State University &copy; 2024](https://www.psu.edu/) | <br> [Leave Us Feedback](https://forms.office.com/r/GbC8H0pZhm)"
+
+downloads: [pdf]
+
+
+format:
+  html:
+    toc: true
+    toc-title: In this lesson
+    code-tools: true  #only while Prabhani reviews..false when live to students
+    code-overflow: "wrap"
+    theme:
+      light: [flatly, lightCustom.scss]
+      dark: [darkly, darkCustom.scss]
+    grid:
+      content-mode: standard
+      margin-width: 250px  #right side margin width
+      body-width: 1000px  #controls the width of the area where I content goes
+
+include-after-body: [logo-link.html]
+
+#listing:      #this was adding the listing to the bottom of every page for some reason
+  #- id: listing-example
+  #  contents: Data_files/***.txt
+  #  type: table
+   # page-size: 100
+  #  sort-ui: true
+  #  fields: [filename]
+ #   sort:
+     # - filename
+ # - id: listing-images
+  #  contents: assets/***.png
+ #   type: grid
+ #   page-size: 100
+  #  sort-ui: true
+  #  fields: [filename]
+  #- id: listing-lessons
+  #  contents: /***.qmd
+  #  type: grid
+  #  fields: [title]
+
+number-sections: true
+number-depth: 3
+toc-depth: 3
+crossref:
+  chapters: true  #not sure why figures are not autonumbering
+  fig-title: Fig
+  #how to make custom numbering for various items
+  custom:
+    - kind: float
+      reference-prefix: Video
+      key: vid
+      caption-location: top
+    - kind: float
+      reference-prefix: Rcode
+      key: rcd
+editor: visual
+license: "CC-BY-NC"
+
+comments:
+  hypothesis: false  #change to true if we want it
+
+

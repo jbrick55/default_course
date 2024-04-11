@@ -1,0 +1,296 @@
+/*-- scss:defaults --*/
+
+.table-container {
+  max-width: 100%; /* Set a maximum width for the container */
+  overflow-x: auto; /* Enable horizontal scrolling when the content overflows */
+}
+
+
+/* spacing for headers, readability */
+
+
+h2, .h2 {
+    margin-bottom: 1rem !important;
+    margin-top: 3rem !important;
+    border-bottom-color: #B88965    !important;  /* Lion Shrine*/
+
+}
+
+hr, .hr {
+  display: none !important;
+}
+
+
+h3:not(.minitab_output *), .h3:not(.minitab_output *) {
+    margin-top: 2rem !important;
+}
+
+.nomargin {
+  margin-top: -1.5em;
+}
+
+#quarto-header * {
+    color: white !important;
+}
+
+
+h1, h2, h3, h4 {
+  color: #001e44 !important;
+}
+
+h2 > .header-section-number, h3 > .header-section-number {
+  color: #001e44 !important;
+}
+
+/*spacing after each bullet in a list*/
+ul li {
+    margin-bottom: 0.4rem !important; /* Adjust the margin as needed */
+}
+
+
+.quarto-title-banner * {
+  color: white !important;
+}
+
+.sidebar-menu-container * {
+  color: #001e44 !important;
+}
+
+img.sidebar-logo {
+  content:url(PSU_Ecosshield.png) !important;
+}
+
+/*Put the word 'lesson' before the auto chapter number on the lesson page*/
+h1.title >.chapter-number:before {
+   content: "Lesson ";
+}
+
+/*add colon after auto chapter numbering*/
+.chapter-number:after {
+   content: ":";
+}
+
+/*add colon after auto subchapter numbering in the TOC and in the body*/
+.header-section-number:after {
+  content: ":";
+
+}
+
+/*style the part names (lessons, resources, etc..)*/
+.text-start > .menu-text {
+  font-weight: bold !important;
+
+}
+
+$link-color:    rgb(13, 110, 253); /*defines link colors */
+
+$callout-color-note: #f4f8fc !default; /* defines the light blue callout color */
+
+/*Callout margin left*/
+
+.callout {
+  margin-left: 1em;
+  font-size: inherit;
+
+}
+
+.callout-body {
+   padding-left: 1em !important;
+}
+
+.callout.callout-style-simple .callout-body {
+    font-size: 1rem !important;
+    font-weight: 400 !important;
+
+}
+
+/*callout title sizes*/
+.callout.callout-style-simple>div.callout-header {
+    border-bottom: none;
+    font-size: 1rem !important;
+    font-weight: 600;
+    opacity: 100%;
+}
+
+/*formatting definitions*/
+.theorem.definition {
+  margin-left: 1em !important;
+  border-left: solid 1px !important;
+  border-left-color: #009CDE  !important;
+  padding-left: 1em;
+}
+
+/*Examples and theorems formatting*/
+/* Reduce the space before theorem titles */
+/*Examples and theorems formatting*/
+
+.theorem-title {
+  color: #001e44;
+  font-size: 22px;
+}
+
+.theorem-title:after {
+  content: "\a";
+  white-space: pre;  /*adds a new line after the title*/
+}
+
+/*Color and icon of example titles*/
+.theorem.example {
+  border-left: 1.3px solid !important;
+  border-left-color: #40826D !important;
+  margin-left: .65rem;
+  padding-left: 1rem;
+
+
+  .theorem-title {
+    color: #40826D;  /* Viridian -color name*/
+
+
+  }
+  .theorem-title:before {
+    content: "\F17A";
+    justify-content: flex-end;
+    padding-right: .4em;
+    font-family: "bootstrap-icons";
+  }
+}
+
+
+/*use for formulas */
+.callout-note {
+  background-color: #FDFBF5;  /*lion shrine max light*/
+  border-left-width: 3px;
+  border-left-color: #B88965 !important; /*lion shrine*/
+
+}
+
+/*table-sm row height adjust*/
+$table-cell-padding-y-sm:     .05rem;
+$table-cell-padding-x-sm:     .45rem;
+
+
+
+
+
+/* MINITAB STYLES */
+
+.minitab_output {
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left-style: dashed;
+  border-left-color: #dae0e0;
+
+  h3,h4 {
+    color: #056eb2 !important;   /*color from the current Minitab web app*/
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    margin-top: 4px !important;
+
+  }
+
+  tbody, tfoot, tr, td   {
+      border-bottom: none !important;
+      text-align: right !important;
+      padding: .75px 7.65px !important;
+  }
+  
+  .table th:first-child, .table td:first-child {
+    text-align: left !important;
+  }
+  .table th.special-th {
+  text-align: right !important; 
+}
+  thead, th,  .header {
+    border-bottom: 1.3px solid black !important;
+    text-align: right !important;
+    border-top: none !important;
+  }
+  table  {
+    caption-side: bottom !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    margin-bottom: 20px !important;
+    table-layout: auto !important;
+    width: auto !important;
+    font-size: 0.875em !important;
+  }
+  table colgroup {
+    border-top: none !important;
+    border-bottom: none !important;
+  }
+
+}
+
+/*general tables*/
+ tbody, tfoot, tr, td, th  {
+      border-bottom: none !important;
+      text-align: right ;
+ }
+
+
+/*TRY IT STYLES try it block -after title*/
+.tryit {
+  margin-top: -1em;
+  padding-top: 1em;
+  margin-left: .65rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left-style: solid;
+  border-left-color: #e4a11b;
+  border-width: thin;
+
+}
+
+
+/*Lesson objectives block*/
+
+.objectiveblock {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  position: relative;
+
+  i {
+    color: #2779B0; /* Customize the icon color */
+    font-size: 24px; /* Adjust the icon size */
+    margin-right: 10px; /* Add spacing between the icon and the text */
+  }
+
+  .callout-header {
+    margin-top: 0; /* Remove default margin for the header */
+    font-size: 24px; /* Adjust the header font size */
+    font-weight: bold; /* Optionally make the header bold */
+    color: #001e44;
+  }
+}
+
+#TOC * > a.nav-link:hover *:not(i) {
+  color: #0d6efd !important;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  color: #0d6efd !important;
+  font-weight: 800 !important;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a {
+  color: #5a6570 !important;
+}
+
+/*adjust the space at the top of R output figures*/
+.quarto-figure>figure {
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0rem !important;
+}
+
+/*adjust size of video captions */
+.quarto-float-vid >*  {
+    font-size: 1.2rem;
+    color: #5a6570;
+}
+

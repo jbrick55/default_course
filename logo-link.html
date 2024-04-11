@@ -1,0 +1,20 @@
+<script type="text/javascript">
+    function hyperlink_logo() {
+      const logo = document.querySelector('img.sidebar-logo');
+      const logo_cloned = logo.cloneNode(true);
+      const link = document.createElement('a');
+      // -----------------------------------------------------------
+      // set the link for the logo here in `link.href` within quotes
+      link.href = 'https://science.psu.edu';
+      // -----------------------------------------------------------
+      link.target = '_blank';
+      link.appendChild(logo_cloned);
+      logo.replaceWith(link);
+    };
+
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      hyperlink_logo();
+    });
+
+
+  </script>
