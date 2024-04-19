@@ -74,7 +74,7 @@ format:
     toc: true
     toc-title: In this lesson
     code-tools: true  #only while Prabhani reviews..false when live to students
-    code-overflow: "wrap"
+    code-overflow: wrap
     theme:
       light: [flatly, lightCustom.scss]
       dark: [darkly, darkCustom.scss]
@@ -85,25 +85,6 @@ format:
 
 include-after-body: [logo-link.html]
 
-#listing:      #this was adding the listing to the bottom of every page for some reason
-  #- id: listing-example
-  #  contents: Data_files/***.txt
-  #  type: table
-   # page-size: 100
-  #  sort-ui: true
-  #  fields: [filename]
- #   sort:
-     # - filename
- # - id: listing-images
-  #  contents: assets/***.png
- #   type: grid
- #   page-size: 100
-  #  sort-ui: true
-  #  fields: [filename]
-  #- id: listing-lessons
-  #  contents: /***.qmd
-  #  type: grid
-  #  fields: [title]
 
 number-sections: true
 number-depth: 3
