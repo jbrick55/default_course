@@ -1,25 +1,29 @@
 /*-- scss:defaults --*/
 
-.table-container {
-  max-width: 100%; /* Set a maximum width for the container */
-  overflow-x: auto; /* Enable horizontal scrolling when the content overflows */
+.quarto-title-banner * {
+  color: white !important;
 }
 
+img.sidebar-logo {
+  content:url(PSU_Ecosshield.png) !important;
+}
 
-/* spacing for headers, readability */
+$link-color:    rgb(13, 110, 253); /*defines link colors */
 
+
+
+/*-----------------------------HEADERS---------------------------------------------- */
 
 h2, .h2 {
     margin-bottom: 1rem !important;
     margin-top: 3rem !important;
-    border-bottom-color: #B88965    !important;  /* Lion Shrine*/
-
+    border-top-style: none;
+    border-bottom-color: #B88965 !important;  /* Lion Shrine*/
 }
 
 hr, .hr {
   display: none !important;
 }
-
 
 h3:not(.minitab_output *), .h3:not(.minitab_output *) {
     margin-top: 2rem !important;
@@ -33,32 +37,16 @@ h3:not(.minitab_output *), .h3:not(.minitab_output *) {
     color: white !important;
 }
 
-
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5 {
   color: #001e44 !important;
 }
 
+/*change the auto numbers in front of the headers*/
 h2 > .header-section-number, h3 > .header-section-number {
   color: #001e44 !important;
 }
 
-/*spacing after each bullet in a list*/
-ul li {
-    margin-bottom: 0.4rem !important; /* Adjust the margin as needed */
-}
-
-
-.quarto-title-banner * {
-  color: white !important;
-}
-
-.sidebar-menu-container * {
-  color: #001e44 !important;
-}
-
-img.sidebar-logo {
-  content:url(PSU_Ecosshield.png) !important;
-}
+/*---------------------------------Header Number - Formats------------------------------*/
 
 /*Put the word 'lesson' before the auto chapter number on the lesson page*/
 h1.title >.chapter-number:before {
@@ -76,13 +64,72 @@ h1.title >.chapter-number:before {
 
 }
 
-/*style the part names (lessons, resources, etc..)*/
+/*style the part names in the left nav (lessons, resources, etc..)*/
 .text-start > .menu-text {
   font-weight: bold !important;
 
 }
 
-$link-color:    rgb(13, 110, 253); /*defines link colors */
+/*-----------------------------------LEFT NAV BAR------------------------------------*/
+
+/*left nav bar background*/
+div.sidebar.sidebar-navigation.rollup.quarto-sidebar-toggle-contents, nav.sidebar.sidebar-navigation:not(.rollup) {
+    background-color: #E4E5E7  !important;  /*PA Limestone Light*/
+}
+
+.active > * > * {
+  color: #0d6efd !important;
+  font-weight: 800 !important;
+}
+
+a:hover > * > * {
+  color: #0d6efd !important;
+}
+
+/*-----------------------------------TOC------------------------------------*/
+
+#TOC * > a.nav-link:hover *:not(i) {
+  color: #0d6efd !important;
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a {
+  color: #314D64  !important;  /*color of lesson titles in TOC - PA Slate*/
+}
+
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  color: #0d6efd !important;
+  font-weight: 800 !important;
+}
+
+/*-----------------------------LISTS---------------------------------------------- */
+
+ul li {
+    margin-bottom: 0.4rem !important; /* spacing after each bullet in a list- adjust the margin as needed */
+}
+
+/*------------------------------TABLES---------------------------------------*/
+
+.table-container {
+  max-width: 100%; /* Set a maximum width for the container */
+  overflow-x: auto; /* Enable horizontal scrolling when the content overflows */
+}
+
+ tbody, tfoot, tr, td, th  {
+      border-bottom: none !important;
+      text-align: right ;
+ }
+ 
+ /*table-sm row height adjust*/
+$table-cell-padding-y-sm:     .05rem;
+$table-cell-padding-x-sm:     .45rem;
+
+/*general tables*/
+ tbody, tfoot, tr, td, th  {
+      border-bottom: none !important;
+      text-align: right !important;
+ }
+
+/*---------------------------CALLOUTS ----------------------------------------------*/
 
 $callout-color-note: #f4f8fc !default; /* defines the light blue callout color */
 
@@ -91,11 +138,18 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
 .callout {
   margin-left: 1em;
   font-size: inherit;
-
 }
 
 .callout-body {
    padding-left: 1em !important;
+}
+
+/*use for formulas */
+.callout-note {
+  background-color: #FDFBF5;  /*lion shrine max light*/
+  border-left-width: 3px;
+  border-left-color: #B88965 !important; /*lion shrine*/
+
 }
 
 .callout.callout-style-simple .callout-body {
@@ -112,7 +166,22 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
     opacity: 100%;
 }
 
-/*formatting definitions*/
+/*---------------------------TRY IT BLOCKS ----------------------------------------------*/
+
+/*TRY IT STYLES try it block -after title*/
+.tryit {
+  margin-top: -1em;
+  padding-top: 1em;
+  margin-left: .65rem;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+  border-left-style: solid;
+  border-left-color: #e4a11b;
+  border-width: thin;
+}
+
+/*------------------------------DEFINITIONS----------------------------------------------*/
+
 .theorem.definition {
   margin-left: 1em !important;
   border-left: solid 1px !important;
@@ -120,9 +189,7 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
   padding-left: 1em;
 }
 
-/*Examples and theorems formatting*/
-/* Reduce the space before theorem titles */
-/*Examples and theorems formatting*/
+/*---------------------------------EXAMPLES----------------------------------------------*/
 
 .theorem-title {
   color: #001e44;
@@ -137,14 +204,12 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
 /*Color and icon of example titles*/
 .theorem.example {
   border-left: 1.3px solid !important;
-  border-left-color: #40826D !important;
+  border-left-color: #3EA39E  !important; /*PA Creek*/
   margin-left: .65rem;
   padding-left: 1rem;
 
-
   .theorem-title {
-    color: #40826D;  /* Viridian -color name*/
-
+    color: #2B5A4C;  /*used this dark creen to pass wcag contrast standards*/
 
   }
   .theorem-title:before {
@@ -155,24 +220,7 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
   }
 }
 
-
-/*use for formulas */
-.callout-note {
-  background-color: #FDFBF5;  /*lion shrine max light*/
-  border-left-width: 3px;
-  border-left-color: #B88965 !important; /*lion shrine*/
-
-}
-
-/*table-sm row height adjust*/
-$table-cell-padding-y-sm:     .05rem;
-$table-cell-padding-x-sm:     .45rem;
-
-
-
-
-
-/* MINITAB STYLES */
+/* -----------------------------MINITAB BLOCK STYLES-------------------------------- */
 
 .minitab_output {
   margin-left: 2rem;
@@ -187,26 +235,28 @@ $table-cell-padding-x-sm:     .45rem;
     font-weight: 600;
     margin-bottom: 2px;
     margin-top: 4px !important;
-
   }
 
-  tbody, tfoot, tr, td   {
+  tbody, tfoot, tr, td  {
       border-bottom: none !important;
       text-align: right !important;
       padding: .75px 7.65px !important;
   }
-  
+
   .table th:first-child, .table td:first-child {
     text-align: left !important;
   }
+  
   .table th.special-th {
-  text-align: right !important; 
-}
-  thead, th,  .header {
+  text-align: right !important;
+  }
+  
+  thead, th, .header {
     border-bottom: 1.3px solid black !important;
     text-align: right !important;
     border-top: none !important;
   }
+  
   table  {
     caption-side: bottom !important;
     border-bottom: none !important;
@@ -216,6 +266,7 @@ $table-cell-padding-x-sm:     .45rem;
     width: auto !important;
     font-size: 0.875em !important;
   }
+  
   table colgroup {
     border-top: none !important;
     border-bottom: none !important;
@@ -223,28 +274,57 @@ $table-cell-padding-x-sm:     .45rem;
 
 }
 
-/*general tables*/
- tbody, tfoot, tr, td, th  {
-      border-bottom: none !important;
-      text-align: right ;
- }
+/* ------------------------OVERRIDES FOR ALERTS-------------------------------- */
 
-
-/*TRY IT STYLES try it block -after title*/
-.tryit {
-  margin-top: -1em;
-  padding-top: 1em;
-  margin-left: .65rem;
-  margin-bottom: 2rem;
-  padding-left: 1rem;
-  border-left-style: solid;
-  border-left-color: #e4a11b;
-  border-width: thin;
-
+.alert {
+  border: none;
+  color: black
 }
 
+.alert a,.alert .alert-link {
+  color: rgb(13, 110, 253);
+  text-decoration: underline
+}
 
-/*Lesson objectives block*/
+.alert-default {
+  background-color: #6c757d
+}
+
+.alert-primary {
+  background-color: #2c3e50
+}
+
+.alert-secondary {
+  background-color: #6c757d
+}
+
+.alert-success {
+  background-color: #18bc9c
+}
+
+.alert-info {
+  background-color: #3498db
+}
+
+.alert-warning {
+  color: #3b444f !important;
+  background-color: #fff6cc !important;
+  border-color: #fff1b3 !important;
+}
+
+.alert-danger {
+  background-color: #e74c3c
+}
+
+.alert-light {
+  background-color: #ecf0f1
+}
+
+.alert-dark {
+  background-color: #7b8a8b
+}
+
+/*---------------------------------Lesson objectives block--------------------------------*/
 
 .objectiveblock {
   border: 1px solid #ddd;
@@ -268,18 +348,7 @@ $table-cell-padding-x-sm:     .45rem;
   }
 }
 
-#TOC * > a.nav-link:hover *:not(i) {
-  color: #0d6efd !important;
-}
-
-.sidebar nav[role="doc-toc"] ul > li > a.active {
-  color: #0d6efd !important;
-  font-weight: 800 !important;
-}
-
-.sidebar nav[role="doc-toc"] ul > li > a {
-  color: #5a6570 !important;
-}
+/*--------------------------------R and CODE OUTPUT------------------------------*/
 
 /*adjust the space at the top of R output figures*/
 .quarto-figure>figure {
@@ -288,9 +357,18 @@ $table-cell-padding-x-sm:     .45rem;
     margin-top: 0rem !important;
 }
 
-/*adjust size of video captions */
+/*------------------------------------VIDEO---------------------------------------*/
+
+/*adjust size of video titles */
 .quarto-float-vid >*  {
     font-size: 1.2rem;
     color: #5a6570;
 }
+
+/*------------------------------------CUSTOM PER COURSE---------------------------------------*/
+
+
+
+
+
 
