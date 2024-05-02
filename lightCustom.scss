@@ -180,26 +180,25 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
   border-width: thin;
 }
 
-/*------------------------------DEFINITIONS----------------------------------------------*/
+/*------------------------------DEFINITIONS---------------------------------------------*/
 
 .theorem.definition {
   margin-left: 1em !important;
   border-left: solid 1px !important;
-  border-left-color: #009CDE  !important;
+  border-left-color: #314D64 !important; //PA Sky
   padding-left: 1em;
+
+  .theorem-title {
+   color: #314D64  ; //PA Slate
+   font-size: 19px;
+   }
+  .theorem-title:after {
+   content: "\a";
+   white-space: pre;  /*adds a new line after the title*/
+  }
 }
 
 /*---------------------------------EXAMPLES----------------------------------------------*/
-
-.theorem-title {
-  color: #001e44;
-  font-size: 22px;
-}
-
-.theorem-title:after {
-  content: "\a";
-  white-space: pre;  /*adds a new line after the title*/
-}
 
 /*Color and icon of example titles*/
 .theorem.example {
@@ -209,8 +208,13 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
   padding-left: 1rem;
 
   .theorem-title {
-    color: #2B5A4C;  /*used this dark creen to pass wcag contrast standards*/
+    color: #2B5A4C;/*used this dark creen to pass wcag contrast standards*/
+    font-size: 22px;
 
+  }
+  .theorem-title:after {
+  content: "\a";
+  white-space: pre;  /*adds a new line after the title*/
   }
   .theorem-title:before {
     content: "\F17A";
@@ -219,7 +223,6 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
     font-family: "bootstrap-icons";
   }
 }
-
 /* -----------------------------MINITAB BLOCK STYLES-------------------------------- */
 
 .minitab_output {
