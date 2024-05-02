@@ -258,21 +258,23 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
 .theorem.definition {
   margin-left: 1em !important;
   border-left: solid 1px !important;
-  border-left-color: #ffffff  !important;
+  border-left-color: #ffffff !important; //PA Sky
   padding-left: 1em;
+
+  .theorem-title {
+   color: #ffffff  ; //PA Slate
+   font-size: 19px;
+   }
+  .theorem-title:after {
+   content: "\a";
+   white-space: pre;  /*adds a new line after the title*/
+  }
 }
+
 
 /*---------------------------------EXAMPLES----------------------------------------------*/
 
-.theorem-title {
-  color: #cfeceb !important; /*PA Creek light 8*/
-  font-size: 22px;
-}
 
-.theorem-title:after {
-  content: "\a";
-  white-space: pre;  /*adds a new line after the title*/
-}
 
 /*Color and icon of example titles*/
 .theorem.example {
@@ -282,7 +284,7 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
   padding-left: 1rem;
 
   .theorem-title {
-    color: white; 
+    color: #cfeceb !important; /*PA Creek light 8*/
     
   }
   .theorem-title:before {
@@ -290,6 +292,10 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
     justify-content: flex-end;
     padding-right: .4em;
     font-family: "bootstrap-icons";
+  }
+  .theorem-title:after {
+    content: "\a";
+    white-space: pre;  /*adds a new line after the title*/
   }
 }
 
