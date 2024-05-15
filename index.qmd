@@ -14,15 +14,10 @@ This course is part of the Online Master of Applied Statistics program offered b
 <a href="https://www.worldcampus.psu.edu/register-or-schedule-courses" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Ready to enroll?</a>
 </center>
 
-> ### Currently enrolled?
->
-> If you are a current student in this course, please see [Canvas](https://psu.instructure.com/) for your syllabus, assignments, lesson videos, and communication from your instructor.
+::: {.border-start .border-success .ms-3 .ps-2 }
+### Currently enrolled?
 
-
-::: content-hidden
-> ### How to enroll?
->
-> If you would like to enroll and experience the entire course for credit please see ['How to enroll in a course'](https://www.worldcampus.psu.edu/register-or-schedule-courses) on the World Campus website.
+If you are a current student in this course, please see [Canvas](https://psu.instructure.com/) for your syllabus, assignments, lesson videos, and communication from your instructor.
 :::
 
 ### Contributors
