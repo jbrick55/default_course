@@ -449,4 +449,14 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
     color: #EEF3F7;
 }
 
+/*------------------------------------Code Blocks---------------------------------------*/
+
+div.sourceCode {
+    margin: 1em 0;
+    margin-left: .5em !important;
+    margin-right: .5em !important;
+    font-size: .95em !important;
+    background-color: #314D64 !important; //PA Slate
+}
+
 /*------------------------------------CUSTOM PER COURSE---------------------------------------*/
