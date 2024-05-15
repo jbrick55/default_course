@@ -70,7 +70,15 @@ hr, .hr {
   display: none !important;
 }
 
+h2:not(.minitab_output *), .h2:not(.minitab_output *) {
+    margin-top: 3rem !important;
+}
+
 h3:not(.minitab_output *), .h3:not(.minitab_output *) {
+    margin-top: 3rem !important;
+}
+
+h4:not(.minitab_output *), .h4:not(.minitab_output *) {
     margin-top: 2rem !important;
 }
 
