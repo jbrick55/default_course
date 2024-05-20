@@ -377,6 +377,15 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
     color: #5a6570;
 }
 
+/*------------------------------------Code Blocks---------------------------------------*/
+
+div.sourceCode {
+    margin: 1em 0;
+    margin-left: .5em !important;
+    margin-right: .5em !important;
+    font-size: .95em !important;
+    background-color: #F2F2F4 !important;  //PA Limestone Max Light
+}
 
 /*------------------------------------CUSTOM PER COURSE---------------------------------------*/
 
