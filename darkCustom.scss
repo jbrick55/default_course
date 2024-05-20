@@ -70,7 +70,15 @@ hr, .hr {
   display: none !important;
 }
 
+h2:not(.minitab_output *), .h2:not(.minitab_output *) {
+    margin-top: 3rem !important;
+}
+
 h3:not(.minitab_output *), .h3:not(.minitab_output *) {
+    margin-top: 3rem !important;
+}
+
+h4:not(.minitab_output *), .h4:not(.minitab_output *) {
     margin-top: 2rem !important;
 }
 
@@ -179,6 +187,10 @@ ul li {
     margin-bottom: 0.4rem !important; /* spacing after each bullet in a list- adjust the margin as needed */
 }
 
+ol li {
+    margin-bottom: 0.4rem !important; /* spacing after each bullet in a list- adjust the margin as needed */
+}
+
 /*--------------------------------TABLES--------------------------------------------*/
 
 .table-container {
@@ -281,6 +293,7 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
   border-left: 1.3px solid !important;
   border-left-color: #cfeceb !important; /*PA Creek light*/
   margin-left: .65rem;
+  margin-top: 2.5em;
   padding-left: 1rem;
 
   .theorem-title {
@@ -446,6 +459,16 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
 .quarto-float-vid >*  {
     font-size: 1.2rem;
     color: #EEF3F7;
+}
+
+/*------------------------------------Code Blocks---------------------------------------*/
+
+div.sourceCode {
+    margin: 1em 0;
+    margin-left: .5em !important;
+    margin-right: .5em !important;
+    font-size: .95em !important;
+    background-color: #314D64 !important; //PA Slate
 }
 
 /*------------------------------------CUSTOM PER COURSE---------------------------------------*/
