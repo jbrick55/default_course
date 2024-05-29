@@ -138,7 +138,7 @@ $table-cell-padding-x-sm:     .45rem;
 /*general tables*/
  tbody, tfoot, tr, td, th  {
       border-bottom: none !important;
-      text-align: right !important;
+      text-align: right;
  }
 
 /*---------------------------CALLOUTS ----------------------------------------------*/
