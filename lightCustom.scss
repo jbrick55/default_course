@@ -121,6 +121,10 @@ ol li {
 
 /*------------------------------TABLES---------------------------------------*/
 
+.small {
+  font-size: 1em !important;  /*makes markdown tables have regular size text*/
+}
+
 .table-container {
   max-width: 100%; /* Set a maximum width for the container */
   overflow-x: auto; /* Enable horizontal scrolling when the content overflows */
