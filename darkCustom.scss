@@ -6,6 +6,14 @@ $body-bg: #314D64 ;  /*dark mode background*/
   color: white !important;
 }
 
+.quarto-title-banner {
+  margin-bottom: -17px !important;
+}
+
+.title-block-banner {
+  margin-bottom: -17px !important;
+}
+
 img.sidebar-logo {
   content:url(darkLogo.png) !important; /* Swaps the image for light/dark */
 }
@@ -56,6 +64,9 @@ kbd, .kbd {
     color: white !important;
 }
 
+.nav-footer {
+  background-color: black !important;
+}
 
 /*-----------------------------HEADERS---------------------------------------------- */
 
@@ -86,8 +97,8 @@ h4:not(.minitab_output *), .h4:not(.minitab_output *) {
   margin-top: -1.5em;
 }
 
-#quarto-header * {
-    color: white !important;
+#quarto-header  {
+    color: white;
 }
 
 h1, h2, h3, h4, h5 {
@@ -193,6 +204,11 @@ ol li {
 
 /*--------------------------------TABLES--------------------------------------------*/
 
+.table-sm {
+  font-size: 1em !important;  /*makes markdown tables have regular size text*/
+}
+
+
 .table-container {
   max-width: 100%; /* Set a maximum width for the container */
   overflow-x: auto; /* Enable horizontal scrolling when the content overflows */
@@ -241,6 +257,11 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
     font-size: 1rem !important;
     font-weight: 400 !important;
 
+}
+
+.callout.callout-style-default .callout-body {
+    font-size: 1rem !important;
+    font-weight: 400;
 }
 
 /*callout title sizes*/
@@ -412,7 +433,13 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
 }
 
 .alert-light {
-  background-color: #ecf0f1
+  background-color: #001E44 !important;
+  color: white;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: .5em;
+  padding-bottom: .2em;
+  border-radius: .75em;
 }
 
 .alert-dark {
@@ -426,7 +453,7 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
   padding: 15px;
   margin: 15px 0;
   border-radius: 5px;
-  background-color: #6A3028   ; // Land-grant
+  background-color: #314D64   ;
   position: relative;
   color: #ffffff;
 
