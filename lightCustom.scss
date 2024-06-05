@@ -4,6 +4,13 @@
   color: white !important;
 }
 
+.quarto-title-banner {
+  margin-bottom: -17px !important;
+}
+
+.title-block-banner {
+  margin-bottom: -17px !important;
+
 img.sidebar-logo {
   content:url(PSU_Ecosshield.png) !important;
 }
@@ -41,8 +48,8 @@ h4:not(.minitab_output *), .h4:not(.minitab_output *) {
   margin-top: -1.5em;
 }
 
-#quarto-header * {
-    color: white !important;
+#quarto-header  {
+    color: white;
 }
 
 h1, h2, h3, h4, h5 {
@@ -121,6 +128,10 @@ ol li {
 
 /*------------------------------TABLES---------------------------------------*/
 
+.table-sm {
+  font-size: 1em !important;  /*makes markdown tables have regular size text*/
+}
+
 .table-container {
   max-width: 100%; /* Set a maximum width for the container */
   overflow-x: auto; /* Enable horizontal scrolling when the content overflows */
@@ -170,6 +181,11 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
 
 }
 
+.callout.callout-style-default .callout-body {
+    font-size: 1rem !important;
+    font-weight: 400;
+}
+  
 /*callout title sizes*/
 .callout.callout-style-simple>div.callout-header {
     border-bottom: none;
@@ -333,7 +349,12 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
 }
 
 .alert-light {
-  background-color: #ecf0f1
+  background-color: #ecf0f1 !important;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: .5em;
+  padding-bottom: .2em;
+  border-radius: .75em;
 }
 
 .alert-dark {
