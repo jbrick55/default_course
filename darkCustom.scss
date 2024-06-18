@@ -282,7 +282,7 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
   margin-bottom: 2rem;
   padding-left: 1rem;
   border-left-style: solid;
-  border-left-color: white;
+  border-left-color: alert-warning;
   border-width: thin;
 }
 
@@ -535,6 +535,35 @@ div.sourceCode {
     border-top-style: none;
     border-bottom: none !important;
 }
+}
+
+/*-----------------------BUTTONS------------------------------------------------*/
+
+//button color for try its//
+.btn-outline-success {
+    --bs-btn-color: #4A7729 !important;
+    --bs-btn-border-color: #fff !important;
+    --bs-btn-hover-color: #fff !important;
+    --bs-btn-hover-bg: #4A7729 !important;
+    --bs-btn-hover-border-color: #4A7729 !important;
+    --bs-btn-focus-shadow-rgb: 24, 188, 156 !important;
+    --bs-btn-active-color: #fff !important;
+    --bs-btn-active-bg: #4A7729 !important;
+    --bs-btn-active-border-color: #4A7729 !important;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+    --bs-btn-disabled-color: #4A7729 !important;
+    --bs-btn-disabled-bg: #fff !important;
+    --bs-btn-disabled-border-color: #4A7729 !important;
+    --bs-btn-bg: #fff !important;
+    --bs-gradient: none;
+}
+// change the text on expansion
+button.btn.collapsed:before {
+  content: 'Show ';
+}
+
+button.btn:not(.collapsed):before {
+  content: 'Hide ';
 }
 
 /*------------------------------------CUSTOM PER COURSE---------------------------------------*/
