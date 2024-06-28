@@ -190,7 +190,8 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
 /*callout title sizes*/
 .callout.callout-style-simple>div.callout-header {
     border-bottom: none;
-    font-size: 1rem !important;
+    padding-bottom: .5rem !important;
+    font-size: 1.2rem !important;
     font-weight: 600;
     opacity: 100%;
 }
