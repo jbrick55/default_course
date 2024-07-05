@@ -472,12 +472,14 @@ div.sourceCode {
 }
 
 // change the text on expansion
-button.btn.collapsed:before {
-  content: 'Show ';
+// we don't want the show hide text in front of the search icon or in front of the source code button
+
+button.btn:not(.quarto-secondary-nav button.quarto-search-button):not(.code-tools-button).collapsed::before {
+  content: 'Show '!important; /* Text when collapsed */
 }
 
-button.btn:not(.collapsed):before {
-  content: 'Hide ';
+button.btn:not(.quarto-secondary-nav button.quarto-search-button):not(.code-tools-button)::before {
+  content: 'Hide ' !important; /* Text when expanded */
 }
 
 /*------------------------------------CUSTOM PER COURSE---------------------------------------*/
