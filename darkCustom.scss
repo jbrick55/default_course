@@ -218,11 +218,6 @@ ol li {
   overflow-x: auto; /* Enable horizontal scrolling when the content overflows */
 }
 
-tbody, tfoot, tr, td, th  {
-      border-bottom: none !important;
-      text-align: right ;
- }
- 
 /*table-sm row height adjust*/
 $table-cell-padding-y-sm:     .05rem;
 $table-cell-padding-x-sm:     .45rem;
