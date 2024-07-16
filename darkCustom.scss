@@ -149,7 +149,7 @@ div.sidebar.sidebar-navigation.rollup.quarto-sidebar-toggle-contents, nav.sideba
   color: #F2F2F4 !important;  /*PA Limestone extra light*/
 }
 
-.active > * > * {
+.active > * > * :not(.tab-content *){
   color: #F9EDDC !important;  /*PA Sky light */
   font-weight: 800 !important;
 }
