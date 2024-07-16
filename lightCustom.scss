@@ -97,7 +97,7 @@ div.sidebar.sidebar-navigation.rollup.quarto-sidebar-toggle-contents, nav.sideba
     background-color: #E4E5E7  !important;  /*PA Limestone Light*/
 }
 
-.active > * > * {
+.active > * > * :not(.tab-content *){
   color: #0d6efd !important;
   font-weight: 800 !important;
 }
