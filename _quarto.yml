@@ -12,6 +12,8 @@ book:
   sidebar:
     style: "docked"
     logo: PSU_Ecosshield.png
+    logo-alt: "Penn State Eberly College of Science"
+    logo-href: "https://science.psu.edu/"
     search: true #search window on the left nav
     contents: auto #this is to create the nav from the files automatically, but it doesn't appear to be working
   navbar:
@@ -25,7 +27,6 @@ book:
   search:
     location: sidebar
   reader-mode: true
-  site-url: https://dev.stat.psu.edu/quarto501. #I don't know if this works
 
 
   back-to-top-navigation: true
@@ -82,8 +83,6 @@ format:
       content-mode: standard
       margin-width: 250px  #right side margin width
       body-width: 1000px  #controls the width of the area where I content goes
-
-include-after-body: [logo-link.html]
 
 
 number-sections: true
