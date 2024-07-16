@@ -143,11 +143,12 @@ h1.title >.chapter-number:before {
 /*left nav bar background*/
 div.sidebar.sidebar-navigation.rollup.quarto-sidebar-toggle-contents, nav.sidebar.sidebar-navigation:not(.rollup) {
     background-color:  #001E44     !important;  /*Nittany navy*/
+  .active > * > *{
+      color: #ffffff !important;
+      font-weight: bolder !important;
+     }
 }
 
-.sidebar-navigation a {
-  color: #F2F2F4 !important;  /*PA Limestone extra light*/
-}
 
 .active > * > * {
   color: #F9EDDC !important;  /*PA Sky light */
