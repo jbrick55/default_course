@@ -95,11 +95,10 @@ h1.title >.chapter-number:before {
 /*left nav bar background*/
 div.sidebar.sidebar-navigation.rollup.quarto-sidebar-toggle-contents, nav.sidebar.sidebar-navigation:not(.rollup) {
     background-color: #E4E5E7  !important;  /*PA Limestone Light*/
-}
-
-.active > * > * {
-  color: #0d6efd !important;
-  font-weight: 800 !important;
+    .active > * > *{
+      color: #314D64 !important;
+      font-weight: bolder !important;
+     }
 }
 
 a:hover > * > * {
