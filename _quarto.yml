@@ -82,7 +82,7 @@ format:
     grid:
       content-mode: standard
       margin-width: 250px  #right side margin width
-      body-width: 1000px  #controls the width of the area where I content goes
+      body-width: 1200px  #controls the width of the area where I content goes
 
 
 number-sections: true
