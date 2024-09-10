@@ -291,17 +291,25 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
 
 .theorem.definition {
   margin-left: 1em !important;
-  border-left: solid 1px !important;
-  border-left-color: #ffffff !important; //PA Sky
   padding-left: 1em;
 
   .theorem-title {
    color: #ffffff  ; //PA Slate
-   font-size: 19px;
+   font-size: 1.1em;
+   margin-left: -1.5em;
    }
+  .theorem-title:before {
+    content: "\F444";
+    justify-content: flex-end;
+    padding-right: .4em;
+    font-family: "bootstrap-icons";
+  }
   .theorem-title:after {
    content: "\a";
    white-space: pre;  /*adds a new line after the title*/
+  }
+  p {
+    margin-left: 1em !important;
   }
 }
 
