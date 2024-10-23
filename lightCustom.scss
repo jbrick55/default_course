@@ -29,9 +29,6 @@ h2, .h2 {
     border-bottom-color: #B88965 !important;  /* Lion Shrine*/
 }
 
-hr, .hr {
-  display: none !important;
-}
 
 h2:not(.minitab_output *), .h2:not(.minitab_output *) {
     margin-top: 3rem !important;
@@ -160,6 +157,7 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
 .callout {
   margin-left: 1em;
   font-size: inherit;
+  overflow-x: auto !important; /* Enable horizontal scrolling when the content overflows */
 }
 
 .callout-body {
@@ -281,7 +279,7 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
   h3,h4 {
     color: #056eb2 !important;   /*color from the current Minitab web app*/
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 2px;
     margin-top: 4px !important;
   }
@@ -330,9 +328,14 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
   color: black
 }
 
-.alert a,.alert .alert-link {
-  color: rgb(13, 110, 253);
+.alert a:not(.nav-link):not(#quarto-announcement),.alert:not(.nav-link):not(#quarto-announcement), .alert-link:not(.nav-link),.alert-light a:not(.nav-link)  {
+  color: rgb(13, 110, 253) !important;
   text-decoration: underline
+}  /*this keeps links within the solution blocks to stay blue but doesn't make the tabs on panels blue within a solution block ..also had to specify not quarto announcements*/
+
+
+.tab-content a  {
+  color: rgb(13, 110, 253) !important;  /*added to make data files within answer blocks to be blue*/
 }
 
 .alert-default {
@@ -352,7 +355,7 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
 }
 
 .alert-info {
-  background-color: #3498db
+  background-color: #CCF0FF !important /*PA Sky light*/
 }
 
 .alert-warning {
@@ -432,6 +435,7 @@ div.sourceCode {
 /*-------------------------- Accordions------------------*/
 
 .accordion {
+  margin-left: 10px !important;
     --bs-accordion-btn-bg: #ffffff !important;
     --bs-accordion-btn-icon-width: 1.5rem !important;
     --bs-accordion-body-padding-x: 1.5rem !important;
@@ -455,10 +459,21 @@ div.sourceCode {
     padding-top: 1rem !important;
 }
 
-.accordion-item {
-    color: var(--bs-accordion-color);
-    background-color: var(--bs-accordion-bg);
-    border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+// change the text on expansion
+button.btn.collapsed:not(.quarto-btn-toggle):not(button.quarto-search-button):not(.code-tools-button)::before {
+  content: 'Show'!important; /* Text when collapsed */
+}
+
+button.btn:not(.collapsed):not(.quarto-btn-toggle):not(button.quarto-search-button):not(.code-tools-button)::before {
+  content: 'Hide' !important; /* Text when expanded */
+}
+
+// Make the bg color change on mouse over
+.accordion-button:hover {
+  background-color: #EEF3F7; /* change to your desired color */
+  font-weight: 550;
+  text-decoration: underline;
+  color: #0047AB !important;
 }
 
 /*-----------------------BUTTONS------------------------------------------------*/
@@ -490,6 +505,70 @@ button.btn.collapsed:not(.quarto-btn-toggle):not(button.quarto-search-button):no
 }
 button.btn:not(.collapsed):not(.quarto-btn-toggle):not(button.quarto-search-button):not(.code-tools-button)::before {
   content: 'Hide' !important; /* Text when expanded */
+}
+
+/*---------------------------TABS-------------------------*/
+.panel-tabset > .nav-tabs {
+    --bs-nav-tabs-border-width: 1px;
+    --bs-nav-tabs-border-color: #ecf0f1;
+    --bs-nav-tabs-link-hover-border-color: #0a58ca #0a58ca #0a58ca !important;
+    --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #fff !important; /*make top of active tab green*/
+    --bs-nav-tabs-link-disabled-color: #dee2e6 !important;
+    
+}
+
+.panel-tabset > .nav {
+    --bs-nav-link-padding-x: .5rem !important;
+    --bs-nav-link-padding-y: 0.5rem !important;
+    --bs-nav-link-color: rgb(13, 110, 253);
+    --bs-nav-link-hover-color: #0a58ca;
+}
+
+.panel-tabset > .nav li:hover {
+    font-weight: bold; /* Make it bold on hover */
+    background-color: #E5E4E2;/* ... color background on hover ... */
+    
+}
+
+.panel-tabset > .nav-tabs .nav-link:not(.active) {
+    border-color: #dee2e6 #dee2e6 #dee2e6 !important; /* gives border color to non active tabs*/
+    background-color: #F5F5F5;/*gives bg color to non-active tabs */
+}
+
+.panel-tabset > .nav-tabs > li > a {
+  border-radius: 12px 12px 0 0 !important; /*left and right rounded border of tabs */
+}
+
+.panel-tabset > .nav-tabs .nav-link.active {
+    font-weight: bold; /*the active tab has bold font*/
+    /*border-top-width: 4px; this would add a thicker bolder at the top of the active tab but then that messes with margin at bottom*/
+}
+
+/*remove bottom border of the tab */
+.nav-tabs {
+  border-bottom: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+
+
+div.panel-tabset >.tab-content {
+  padding-top: 1rem !important;
+  border-width: 1px !important;
+  border-top: 1px solid #dee2e6 !important; /*gives line out to the rest of the box */
+  border-left: #dee2e6 1px solid;
+  border-right: #dee2e6 1px solid;
+  border-bottom: #dee2e6 1px solid;
+}
+
+/*removes margin between tab and top of content body */
+div.panel-tabset > ul > li  {
+  margin-bottom: 0rem !important;
+}
+
+/*removes extra space above headers inside panel content */
+div.panel-tabset > .tab-content h3:not(.minitab_output *), .h3:not(.minitab_output *), 
+div.panel-tabset > .tab-content h4 { 
+  margin-top: 1rem !important;
 }
 
 /*------------------------------------CUSTOM PER COURSE---------------------------------------*/
