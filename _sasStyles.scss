@@ -1,3 +1,8 @@
+#jupyter-sas-kernel *{
+    font-size: .8rem;
+    width: auto;
+}
+
 #jupyter-sas-kernel {
     table, .body.c > pre, .body.c div > table,
     .body.c div > pre, .body.c > table, .body.c > pre,
@@ -35,10 +40,10 @@
     h6.heading6 { text-align: left }
     span { text-align: left }
     table { margin-bottom: 1em }
-    td, th { text-align: left; padding: 3px 6px; vertical-align: top }
+    td, th { text-align: left; padding: 2px 6px; vertical-align: top; border-bottom: 1px solid #c0c0c0 }
     td[class$="fixed"], th[class$="fixed"] { white-space: pre }
     section, article { padding-top: 1px; padding-bottom: 8px }
-    hr.pagebreak { height: 0px; border: 0; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
+    hr.pagebreak { height: 0px; ; border-bottom: 1px solid #c0c0c0; margin: 1em 0 }
     .stacked-value { text-align: left; display: block }
     .stacked-cell > .stacked-value, td.data > td.data, th.data > td.data, th.data > th.data, td.data > th.data, th.header > th.header { border: 0 }
     .stacked-cell > div.data { border-width: 0 }
