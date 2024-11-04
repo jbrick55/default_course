@@ -2,6 +2,35 @@
 title-block-banner: fiveoone_banner.png
 title-block-banner-color: light
 titlegraphic: fiveoone_banner.png
+sidebar: false
+
+listing:
+  id: lessons
+  categories: unnumbered
+  contents:
+    - Lesson0.qmd
+    - Lesson01.qmd
+    - Lesson02.qmd
+    - Lesson03.qmd
+    - Lesson04.qmd
+    - Lesson05.qmd
+    - Lesson06.qmd
+    - Lesson07.qmd
+    - Lesson08.qmd
+    - Lesson09.qmd
+    - Lesson10.qmd
+    - Lesson11.qmd
+    - Lesson12.qmd
+
+  type: grid
+  grid-columns: 4
+  grid-item-align: center
+  fields: [image,title, categories, file-modified]
+  field-display-names: 
+    title: "Lessons"
+    file-modified: "Updated:"
+  date-format: short
+  sort: "filename"
 ---
 
 ## About this course {.unnumbered}
@@ -18,6 +47,11 @@ This course is part of the Online Master of Applied Statistics program offered b
 ### Currently enrolled?
 
 If you are a current student in this course, please see [Canvas](https://psu.instructure.com/) for your syllabus, assignments, lesson videos, and communication from your instructor.
+:::
+
+## Lessons
+
+::: {#lessons}
 :::
 
 ### Contributors
