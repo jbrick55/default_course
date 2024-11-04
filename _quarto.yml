@@ -34,19 +34,19 @@ book:
     - index.qmd
     - part: "Lessons"
       chapters:
-        - 501Lesson1.qmd
-        - 501Lesson2.qmd
-        - 501Lesson3.qmd
-        - 501Lesson4.qmd
-        - 501Lesson5.qmd
-        - 501Lesson6.qmd
-        - 501Lesson7.qmd
-        - 501Lesson8.qmd
-        - 501Lesson9.qmd
-        - 501Lesson10.qmd
-        - 501Lesson11.qmd
-        - 501Lesson12.qmd
-        - 501Lesson13.qmd
+        - Lesson01.qmd
+        - Lesson02.qmd
+        - Lesson03.qmd
+        - Lesson04.qmd
+        - Lesson05.qmd
+        - Lesson06.qmd
+        - Lesson07.qmd
+        - Lesson08.qmd
+        - Lesson09.qmd
+        - Lesson10.qmd
+        - Lesson11.qmd
+        - Lesson12.qmd
+        - Lesson13.qmd
     - part: "Optional Content"
       chapters:
         - Topic1Robustregression.qmd
