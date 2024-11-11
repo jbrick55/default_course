@@ -4,3 +4,15 @@ image: /assets/L1card.png
 ---
 
 # Title of the first lesson
+
+## Overview {.unnumbered  .unlisted}
+
+:::{.objectiveblock}
+
+<i class="bi bi-check2-circle"></i><span class="callout-header">Objectives</span>
+
+
+Upon completion of this lesson, you should be able to:
+
+
+:::
