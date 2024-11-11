@@ -47,11 +47,7 @@ book:
         - Lesson11.qmd
         - Lesson12.qmd
         - Lesson13.qmd
-    - part: "Optional Content"
-      chapters:
-        - Topic1Robustregression.qmd
-        - Topic2TSandAutocorr.qmd
-        - Topic3Poissonnonlinear.qmd
+
     - part: "Resources"
       chapters:
         - Minitab_procedures.qmd
