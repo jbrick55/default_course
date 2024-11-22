@@ -526,10 +526,10 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
 }
 
 /*add horizontal scroll bar to all latex equations that extend past the width of the body*/
-.MJX-TEX {
-   max-width: 100% !important;
-   overflow-x: auto !important;
-   overflow-y: hidden !important;
+.MathJax {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
 }
 
 /*------------------------------------VIDEO---------------------------------------*/
