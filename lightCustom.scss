@@ -449,6 +449,12 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
    overflow-y: hidden !important;
 }
 
+.MathJax {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
+
 /*------------------------------------VIDEO---------------------------------------*/
 
 /*adjust size of video titles */
