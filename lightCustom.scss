@@ -418,6 +418,43 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
     margin-top: 0rem !important;
 }
 
+.quarto-layout-cell >pre code {
+    background-color: rgba(0,0,0,0);
+    font-size: inherit;
+    margin-left: 1em !important;
+    color: purple !important;
+    word-break: normal;
+    
+}
+
+.cell-output>pre code {
+    background-color: rgba(0,0,0,0);
+    font-size: inherit;
+    margin-left: 1em !important;
+    color: purple !important;
+    word-break: normal;
+    
+}
+
+/*make text output from R wrap*/
+.cell-output-stdout code {
+        word-break: break-wor !important;
+        white-space: pre-wrap !important;
+}
+
+/*add horizontal scroll bar to all latex equations that extend past the width of the body*/
+.MJX-TEX {
+   max-width: 100% !important;
+   overflow-x: auto !important;
+   overflow-y: hidden !important;
+}
+
+.MathJax {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+}
+
 /*------------------------------------VIDEO---------------------------------------*/
 
 /*adjust size of video titles */
