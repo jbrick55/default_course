@@ -1,0 +1,81 @@
+<!--<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const toc = document.getElementById('TOC');
+    const navbarCollapse = document.getElementById('navbarCollapse');
+    const menuButton = document.querySelector('.navbar-toggler');
+
+    // Function to move TOC to navbar on small screens
+    function handleTOCDisplay() {
+        if (window.innerWidth < 768) {
+            if (!navbarCollapse.contains(toc)) {
+                navbarCollapse.appendChild(toc); // Move TOC into the navbar
+            }
+        } else {
+            if (toc.parentNode !== document.getElementById('quarto-margin-sidebar')) {
+                document.getElementById('quarto-margin-sidebar').appendChild(toc); // Move TOC back to original location
+            }
+        }
+    }
+
+    // Initial check on page load
+    handleTOCDisplay();
+
+    // Check when resizing the window
+    window.addEventListener('resize', handleTOCDisplay);
+
+    // Toggle TOC visibility when navbar is expanded on small screens
+    menuButton.addEventListener('click', function() {
+        if (window.innerWidth < 768) {
+            toc.classList.toggle('toc-active'); // Toggle visibility of the TOC in the navbar
+        }
+    });
+});
+</script>-->
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const toc = document.getElementById('TOC'); // TOC element
+    const activeLesson = document.querySelector('.sidebar-item .sidebar-link.active'); // Active lesson link
+    const originalTocParent = toc.parentElement; // Store original TOC location
+
+    // Create a container for the TOC in the sidebar
+    const nestedTocContainer = document.createElement('ul');
+    nestedTocContainer.className = 'sidebar-toc-nested list-unstyled';
+
+    // Function to move the TOC into the sidebar
+    function moveTocToSidebar() {
+        if (!toc || !activeLesson) return;
+        while (toc.firstChild) {
+            nestedTocContainer.appendChild(toc.firstChild);
+        }
+        const parentItem = activeLesson.closest('.sidebar-item');
+        parentItem.appendChild(nestedTocContainer);
+        toc.style.display = 'none'; // Hide the original TOC container
+    }
+
+    // Function to restore the TOC to its original location
+    function restoreTocToOriginalLocation() {
+        if (nestedTocContainer.parentNode) {
+            while (nestedTocContainer.firstChild) {
+                toc.appendChild(nestedTocContainer.firstChild);
+            }
+            nestedTocContainer.remove(); // Remove the container
+            toc.style.display = ''; // Show the original TOC container
+        }
+    }
+
+    // Function to handle screen width changes
+    function handleScreenResize() {
+        if (window.innerWidth < 768) {
+            moveTocToSidebar();
+        } else {
+            restoreTocToOriginalLocation();
+        }
+    }
+
+    // Initial check and event listener for resize
+    handleScreenResize();
+    window.addEventListener('resize', handleScreenResize);
+});
+
+</script>
