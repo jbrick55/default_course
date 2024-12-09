@@ -121,6 +121,85 @@ a:hover > * > * {
   font-weight: 800 !important;
 }
 
+/*---------------CUSTOM CSS FOR DYNAMIC TOC ----------------*/
+
+
+h5.quarto-listing-category-title {
+  visibility: hidden; /* Hides original content but keeps space */
+  position: relative;
+}
+
+h5.quarto-listing-category-title::before {
+  content: "Course Topics"; /* Replaces the original text */
+  visibility: visible; /* Ensures the replacement text is visible */
+  position: absolute;
+  left: 0; /* Adjust as necessary for alignment */
+}
+
+.sidebar-menu-container * #toc-title {
+  display: none;
+}
+
+/* Nested TOC styling in the sidebar */
+.sidebar-toc-nested {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-left: 5px;
+  border-left: 2px solid #ddd;
+}
+
+.sidebar-toc-nested li {
+  margin-bottom: 5px;
+  list-style-type: none;  /* Remove default bullets */
+}
+
+.sidebar-toc-nested a {
+  font-size: 0.9rem;
+  color: #555;
+  text-decoration: none;
+  .active > * > *{
+      color: #0a53be !important;
+      font-weight: bolder !important;
+    }
+  
+}
+
+.sidebar-toc-nested a:active > .header-section-number> * > *{
+      color: #0a53be !important;
+      font-weight: bolder !important;
+}
+
+.sidebar-toc-nested a:hover .header-section-number{
+      color: #0d6efd !important;
+      font-weight: bolder !important;
+}
+
+.sidebar-toc-nested a:active {
+      color: #0a53be !important;
+      font-weight: bolder !important;
+}
+.sidebar-toc-nested .nav-link.active {
+      color: #0a53be !important;
+      font-weight: bolder !important;
+}
+
+
+.sidebar-toc-nested a:hover {
+  font-weight: bold;
+  color: #0d6efd !important;
+}
+
+/* Default TOC styling for wide screens */
+#TOC {
+  display: block; /* Visible on wide screens */
+}
+
+@media (max-width: 767px) {
+  #TOC {
+      display: none; /* Hidden on small screens */
+  }
+}
+
 /*-----------------------------LISTS---------------------------------------------- */
 
 ul li {
