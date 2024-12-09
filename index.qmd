@@ -4,10 +4,17 @@ title-block-banner-color: light
 titlegraphic: fiveoone_banner.png
 sidebar: false
 
+grid:
+      content-mode: standard
+      margin-width: 390px  #right side margin width so it's wider on this home page because of the topics 
+      body-width: 1100px 
+ 
+toc-title: "Contents"  #changes the top of the TOC instead of saying in this lesson
+
 listing:
   id: lessons
-  categories: unnumbered
-  contents:
+  categories: cloud
+  contents:  #adjust as needed to the number of lessons
     - Lesson0.qmd
     - Lesson01.qmd
     - Lesson02.qmd
