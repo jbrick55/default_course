@@ -148,6 +148,14 @@ h5.quarto-listing-category-title::before {
   border-left: 2px solid #ddd;
 }
 
+.sidebar-toc-nested  >ul {
+  padding-left: 1rem;
+  li  {
+    margin-top: .5rem;
+    padding-left: 0rem;
+  }
+}
+
 .sidebar-toc-nested li {
   margin-bottom: 5px;
   list-style-type: none;  /* Remove default bullets */
