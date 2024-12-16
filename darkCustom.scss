@@ -163,6 +163,11 @@ a:hover > * > * {
   color: #F9EDDC !important;  /*PA Sky light */
 }
 
+/*make left nav links white*/
+div.sidebar-item-container {
+  color: white !important;
+}
+
 /*-----------------------------------TOC------------------------------------*/
 
 #TOC * > a.nav-link:hover *:not(i) {
