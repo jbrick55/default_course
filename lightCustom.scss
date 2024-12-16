@@ -385,10 +385,15 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
       padding: .75px 7.65px !important;
   }
 
-  .table th:first-child, .table td:first-child {
+  .table tbody tr th:first-child {
+    font-weight: normal !important;
+    border-bottom: none!important;
+    text-align: left !important;
+  }
+  
+  .table td:first-child {
     text-align: left !important;
     border-bottom: none!important;
-    font-weight: normal !important;
   }
   
   .table th.special-th {
@@ -397,7 +402,6 @@ $callout-color-note: #f4f8fc !default; /* defines the light blue callout color *
   
   thead, th, .header {
     border-bottom: 1.3px solid black !important;
-    text-align: right !important;
     border-top: none !important;
   }
   
