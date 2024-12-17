@@ -78,8 +78,12 @@ format:
     grid:
       content-mode: standard
       margin-width: 250px  #right side margin width
-      body-width: 1200px  #controls the width of the area where I content goes
-
+      body-width: 1400px  #controls the width of the area where I content goes
+    mermaid: 
+      theme: neutral
+      
+include-in-header: cookies.html
+include-after-body: [tocFixer.html, TableRowHeader.html]
 
 number-sections: true
 number-depth: 3
